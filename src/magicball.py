@@ -21,7 +21,7 @@ def getTagLibs():
         index = index + 1
     return lines
 
-def main(): 
+def shake(): 
     # input
     sent = "What doesn't kill you, only makes you stronger"
     tagTokens = getTagTokens()
@@ -41,7 +41,7 @@ def main():
     replace_index = -1
     index = 0
     for entity in entities:
-        if entity[1] == valid:
+        if len(entity) ==2 and entity[1] == valid:
             break
         replace_index = replace_index + 1
 
